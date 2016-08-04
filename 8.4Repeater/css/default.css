@@ -1,0 +1,14 @@
+﻿.table {
+    border: 2px solid #ccc;
+    border-collapse: collapse;
+}
+
+.table-header {
+    background-color: rgb(87, 41, 193);
+    color: rgb(255, 255, 255);
+}
+
+.table-body > tr.table-body-row:nth-of-type(odd)  {
+    background-color: #ccc;
+    color:black;
+}

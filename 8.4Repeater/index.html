@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>_8.4Repeater</title>
+    <link href="lib/winjs-4.0.1/css/ui-light.css" rel="stylesheet" />
+    <script src="lib/winjs-4.0.1/js/base.js"></script>
+    <script src="lib/winjs-4.0.1/js/ui.js"></script>
+    <link href="css/default.css" rel="stylesheet" />
+    <script src="js/main.js"></script>
+</head>
+
+
+<body class="win-type-body">
+    <div class="box">
+        <!--select控件中使用Repeater-->
+        <h2 class="win-h2">HTML Repeater Control with <code>select</code> HTML element</h2>
+        <select class="win-dropdown" data-win-control="WinJS.UI.Repeater" data-win-options="{data: Data.items}">
+            <option data-win-bind="value: id; textContent: description"></option>
+        </select><br /><br />
+
+        <!--ul控件中使用Repeater-->
+        <h2 class="win-h2">HTML Repeater Control with <code>ul</code> HTML element</h2>
+        <ul data-win-control="WinJS.UI.Repeater" data-win-options="{data: Data.items}">
+            <li data-win-bind="textContent: description"></li>
+        </ul>
+
+        <!--table控件中使用Repeater-->
+        <h2 class="win-h2">HTML Repeater Control with <code>table</code> HTML element</h2><br />
+        <table class="table">
+            <!--表头-->
+            <thead class="table-header">
+                <tr>
+                    <td>Id</td>
+                    <td>Description</td>
+                </tr>
+            </thead>
+            <!--表内容-->
+            <tbody class="table-body" data-win-control="WinJS.UI.Repeater" data-win-options="{data: Data.items}">
+                <tr class="table-body-row">
+                    <td data-win-bind="textContent: id"></td>
+                    <td data-win-bind="textContent: description"></td>
+                </tr>
+            </tbody>
+        </table><br /><br />
+    </div>
+
+</body>
+</html>
